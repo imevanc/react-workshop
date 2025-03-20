@@ -1,0 +1,62 @@
+import {Guides} from '@/components/Guides'
+import {Resources} from '@/components/Resources'
+import {HeroPattern} from '@/components/HeroPattern'
+import {Heading} from '@/components/Heading'
+
+export const metadata = {
+    title: 'React Workshop',
+    description:
+        'Dive deep into React with hands-on experience. Learn how to build dynamic, interactive web applications, manage state, and use hooks. Master React’s core concepts and integrate modern tools and APIs to level up your development skills.',
+}
+
+export const sections = [
+    {title: 'Getting Started', id: 'gettingStarted'},
+    {title: 'What We Will Learn', id: 'whatWeWillLearn'},
+    {title: 'Guides', id: 'guides'},
+    {title: 'Conferences', id: 'conferences'}
+]
+
+<HeroPattern/>
+
+# React Workshop
+Dive deep into React with hands-on experience. Learn how to build dynamic, interactive web applications, manage state, and use hooks. Master React’s core concepts and integrate modern tools and APIs to level up your development skills.
+
+<div className="not-prose mt-6 mb-16 flex gap-3">
+    <Button href="/react101" arrow="right">
+        <>React 101</>
+    </Button>
+    <Button href="/advancedPatterns" variant="outline">
+        <>Advanced Patterns</>
+    </Button>
+</div>
+
+<div className="xl:max-w-none">
+    <Heading level={2} id="gettingStarted">
+        Getting Started
+    </Heading>
+    <div className="border-t border-zinc-900/5 dark:border-white/5"/>
+</div>
+Before you join our React workshop, make sure you're all set! Here's what you'll need:
+- A non-LBG device 💻: While we don't expect any issues on LBG-dev Macs, it's recommended to use a non-LBG device for smoother performance.
+- Node.js version > 18 🌱: Ensure you have Node.js version 18 or higher installed on your machine. You can download it from here.
+- Git 🧑‍💻: You'll need Git for version control. If you don't have it installed, you can get it here.
+- Terminal 🖥️: A command-line interface will be essential to run various development tasks.
+- An IDE of your choice 🧑‍🔧: Popular choices include Visual Studio Code, Sublime Text, or WebStorm, but feel free to use whatever you're most comfortable with.
+- Eagerness to Learn 🚀: The most important prerequisite! Come with an open mind and enthusiasm to explore React.
+
+<div className="xl:max-w-none">
+    <Heading level={2} id="whatWeWillLearn">
+        What We Will Learn
+    </Heading>
+    <div className="border-t border-zinc-900/5 dark:border-white/5"/>
+</div>
+In this series of workshops, we'll cover a variety of topics that will help you level up your React skills:
+- React 101: We'll start with the basics—understanding React forms, managing inputs, handling error boundaries, and working with lists.
+- React Hooks: Learn how to manage UI state, lift state between components, handle side effects, and optimise DOM effects using React hooks.
+- Advanced Patterns: Dive into advanced React patterns like component composition, compound components, using slots, reducers, and initialisers to manage complex state and behavior.
+- Suspense: Master React Suspense for efficient data fetching, dynamic promises, implementing optimistic UI, and using Suspense optimisations to enhance user experience.
+
+
+<Guides/>
+
+<Resources/>

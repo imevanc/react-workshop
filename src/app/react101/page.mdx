@@ -1,0 +1,104 @@
+export const metadata = {
+    title: 'React 101',
+    description:
+        'Getting started with React? This guide will help you understand the basics of React.',
+}
+
+# React 101
+In this workshop, we'll start with React 101, providing you with a strong foundation in React essentials. This section is perfect for anyone who wants to understand how React works and how to begin building interactive, dynamic web applications.
+
+## Contents
+We'll begin with the basics and cover essential React concepts that will help you build functional applications. Here's what you'll learn:
+
+- 📝 React Forms:
+Understand how to create forms in React and manage user input. You'll explore controlled and uncontrolled components, handle form submissions, and validate inputs.
+
+<CodeGroup>
+    ```bash {{language: 'js'}}
+    # Form Example in JavaScript
+    import React, { useState } from 'react';
+
+    const ContactFormJS = () => {
+        return (
+            <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-1">
+                        Name
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full px-3 py-2 border rounded-md ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
+                    />
+                    {errors.name && (
+                        <p className="mt-1 text-red-500 text-sm">{errors.name}</p>
+                    )}
+                </div>
+
+                <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+                >
+                    Submit
+                </button>
+            </form>
+        );
+    };
+    ```
+
+    ```bash {{language: 'typescript'}}
+    # Form Example in TypeScript
+    import React from 'react';
+
+    interface FormData {
+        name: string;
+    }
+
+    interface FormErrors {
+        name?: string;
+    }
+
+    const ContactFormTS: React.FC = () => {
+    return
+        (
+            <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-1">
+                        Name
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full px-3 py-2 border rounded-md ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
+                    />
+                    {errors.name && (
+                        <p className="mt-1 text-red-500 text-sm">{errors.name}</p>
+                    )}
+                </div>
+
+                <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+                >
+                    Submit
+                </button>
+            </form>
+        );
+    };
+    ```
+</CodeGroup>
+
+- ⌨️ Managing Inputs:
+Learn how to bind input fields to state and manage the flow of data in your components. You'll discover best practices for handling input and state updates.
+
+- 🚨 Error Boundaries:
+Learn how to handle errors in your React applications. With error boundaries, you'll ensure your app can gracefully catch JavaScript errors and display fallback UIs, improving the user experience.
+
+- 🔢 Working with Lists:
+Learn how to render and manage lists of data in React. You'll explore how to use the .map() function and key props for efficient list rendering.
