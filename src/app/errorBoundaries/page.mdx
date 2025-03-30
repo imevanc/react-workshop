@@ -1,0 +1,18 @@
+# Error Boundaries in React 🛡️
+
+Error Boundaries provide a safety net for catching JavaScript errors in React component trees, preventing the entire application from crashing. This is vital for forms where user input can trigger unexpected errors.
+Without error boundaries, a single rendering error can cause your entire React application to unmount - resulting in frustrated users who might lose all their form data. The react-error-boundary package offers an elegant solution with ready-to-use components that include reset functionality and error recovery patterns. 🔄
+
+## 📝 Why They're Essential for Forms
+Forms are error hotspots—complex validation logic, state management, and API interactions can all fail. Error boundaries create isolated environments where failures in one input field won't affect others, preserving the user's progress and data entry.
+The reset capabilities are particularly valuable, allowing users to retry submissions or reset specific fields without losing their entire form state. This significantly improves user experience and form completion rates! 📈
+
+<div>
+    <iframe
+        src="https://codesandbox.io/embed/yvdfjr?view=preview&module=%2Fsrc%2Fcomponents%2FInputFields.jsx&hidenavigation=1&expanddevtools=1"
+        style={{width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden'}}
+        title="error boundaries"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+    ></iframe>
+</div>
