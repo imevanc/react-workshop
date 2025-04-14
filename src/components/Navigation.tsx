@@ -244,7 +244,8 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'React Hooks',
     links: [
-      { title: 'UI State', href: '/uiState' },
+      { title: 'React App Lifecycle', href: '/reactLifecycle' },
+      { title: 'useState', href: '/useState' },
       { title: 'Side Effects', href: '/sideEffects' },
       { title: 'Lifting State', href: '/liftingState' },
       { title: 'Dom Effects', href: '/domEffects' },

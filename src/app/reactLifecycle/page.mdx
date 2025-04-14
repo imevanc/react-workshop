@@ -1,0 +1,50 @@
+import {ReactLifecycle} from '../../components/ReactLifecycle';
+import {CodeGroup} from "../../components/Code";
+
+# What is the React Lifecycle?
+
+## 🏗️ React's Render Process
+In React applications, user interactions drive a continuous UI update cycle. The process begins with the initial render, where React creates DOM nodes from your component elements. When users interact with the page, they trigger state changes—data that evolves over time, like a counter incrementing from zero to one. These state changes prompt React to re-render, recognizing that the UI needs updating to reflect the new state.
+## 👷 The Update Cycle
+React then calls your component functions again with the updated state values, generating a fresh representation of the UI. It efficiently determines what DOM updates are necessary by comparing the previous and new UI structures through its virtual DOM diffing algorithm. After making only the required DOM changes (like updating a button's text content), React waits for the next user interaction, continuing this cycle of interaction → state change → re-render → DOM update throughout the application's lifecycle.
+
+<ReactLifecycle chart={`
+    flowchart LR
+    A[Initial Render] -->B[Creates DOM]
+    B --> C[User Interaction]
+    C --> D[Triggers State Change]
+    D --> E[Causes Re-render]
+    E --> B
+
+    classDef render fill:#61dafb,stroke:#333,stroke-width:2px,color:black
+    classDef dom fill:#282c34,stroke:#333,stroke-width:2px,color:white
+    classDef interaction fill:#f9a03f,stroke:#333,stroke-width:2px,color:black
+    classDef state fill:#8cc84b,stroke:#333,stroke-width:2px,color:black
+    classDef causes fill:#ff0000,stroke:#333,stroke-width:2px,color:black
+
+    class A render
+    class B dom
+    class C interaction
+    class D state
+    class E causes
+    `}/>
+
+## 🪝React's Built-in Hooks
+
+- **useState**: Manages state in functional components
+- **useEffect**: Handles side effects (DOM manipulation, data fetching, subscriptions)
+- **useReducer**: Manages complex state logic with a reducer pattern
+- **useRef**: Creates mutable references that persist across renders
+- **use**: Accepts a promise or context and integrates with React's Suspense for data fetching
+
+```jsx
+    const Counter = () => {
+        const [count, setCount] = useState(0);
+
+        return (
+            <button onClick={() => setCount(count + 1)}>
+                Clicked {count} times
+            </button>
+        );
+    }
+```
